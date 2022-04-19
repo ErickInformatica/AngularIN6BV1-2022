@@ -12,6 +12,12 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/registro">Registro</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuario/productos">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuario/graficas">Graficas</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -24,12 +30,11 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link disabled" *ngIf="_usuarioService.getIdentidad()">{{ _usuarioService.getIdentidad().nombre }}</a>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success" type="submit" (click)="cerrarSesion()">Cerrar Sesion</button>
       </form>
     </div>
   </div>

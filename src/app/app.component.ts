@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Kinalito 2022';
+  title = 'AngularIN6AV2022';
 }

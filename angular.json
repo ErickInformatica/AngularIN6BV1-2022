@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularIN6BV2022": {
+    "AngularIN6AV2022": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-in6-bv2022",
+            "allowedCommonJsDependencies": ["chart.js"],
+            "outputPath": "dist/angular-in6-av2022",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AngularIN6BV2022:build:production"
+              "browserTarget": "AngularIN6AV2022:build:production"
             },
             "development": {
-              "browserTarget": "AngularIN6BV2022:build:development"
+              "browserTarget": "AngularIN6AV2022:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularIN6BV2022:build"
+            "browserTarget": "AngularIN6AV2022:build"
           }
         },
         "test": {
@@ -111,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "AngularIN6BV2022"
+  "defaultProject": "AngularIN6AV2022"
 }
